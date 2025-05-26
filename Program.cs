@@ -17,7 +17,7 @@ namespace FluentEmail_ConsoleApp
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 Port = 587,
-                Credentials = new System.Net.NetworkCredential("abolfazlshs80@gmail.com", "ewnb cuaj cpim zgwy")
+                Credentials = new System.Net.NetworkCredential("sender@gmail.com", "passsord")
             });
 
             // مقداردهی اولیه FluentEmail
@@ -26,8 +26,8 @@ namespace FluentEmail_ConsoleApp
 
             // ارسال ایمیل
             var email = await Email
-                .From("abolfazlshs80@gmail.com")
-                .To("a95.shabani@gmail.com", "Recipient Name")
+                .From("sender@gmail.com")
+                .To("resiver@gmail.com", "Recipient Name")
                 .Subject(" hello from fluentsmtp")
                 .Body("send message abolfazlshabani as messager")
                 .SendAsync();
